@@ -1,4 +1,6 @@
-import "token.sol";
+pragma solidity ^0.7.5;
+
+import "./token.sol";
 
 contract TestToken is Token {
     constructor() public {
@@ -7,5 +9,7 @@ contract TestToken is Token {
     }
 
     // add the property
-    function echidna_cannot_be_unpaused() public view returns (bool) {}
+    function echidna_cannot_be_unpaused() public view returns (bool) {
+        return is_paused;
+    }
 }

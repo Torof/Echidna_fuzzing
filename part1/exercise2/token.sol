@@ -1,11 +1,15 @@
-pragma solidity ^0.8.0;
+pragma solidity ^0.7.0;
 
 contract Ownership{
 
-    address owner = msg.sender;
-
-    function Owner() public{
+    address owner;
+    
+    constructor() public{
         owner = msg.sender;
+    }
+
+    function Owner() public returns(address){
+        return owner;
     }
 
     modifier isOwner(){

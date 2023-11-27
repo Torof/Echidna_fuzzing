@@ -1,4 +1,4 @@
-import "token.sol";
+import "./token.sol";
 
 /// @dev to run: $ echidna-test solution.sol
 contract TestToken is Token {
